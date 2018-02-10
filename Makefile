@@ -1,7 +1,11 @@
 all: dist
 PHONY: all
 
-svgs = models/simple_armor_2.svg
+svgs = \
+	models/simple_armor_0.svg \
+	models/simple_armor_1.svg \
+	models/simple_armor_2.svg \
+	bmodels/simple_b_bh100_0.svg \
 
 # Render SVGs to PNG images and optimize them
 dist: clean
