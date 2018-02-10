@@ -8,6 +8,7 @@ svgs = \
 	models/simple_armor_0.svg \
 	models/simple_armor_1.svg \
 	models/simple_armor_2.svg \
+	models/simple_g_shot_0.svg \
 	models/simple_invisibl_0.svg \
 	models/simple_invulner_0.svg \
 	models/simple_quaddama_0.svg \
