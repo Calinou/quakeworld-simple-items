@@ -7,12 +7,16 @@ svgs = \
 	bmodels/simple_b_bh10_0.svg \
 	bmodels/simple_b_bh25_0.svg \
 	bmodels/simple_b_bh100_0.svg \
+	bmodels/simple_b_nail0_0.svg \
+	bmodels/simple_b_nail1_0.svg \
 	bmodels/simple_b_shell0_0.svg \
 	bmodels/simple_b_shell1_0.svg \
 	models/simple_armor_0.svg \
 	models/simple_armor_1.svg \
 	models/simple_armor_2.svg \
 	models/simple_g_light_0.svg \
+	models/simple_g_nail_0.svg \
+	models/simple_g_nail2_0.svg \
 	models/simple_g_shot_0.svg \
 	models/simple_invisibl_0.svg \
 	models/simple_invulner_0.svg \
