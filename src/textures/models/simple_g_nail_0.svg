@@ -26,7 +26,7 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="1.4"
-     inkscape:cx="-35.285714"
+     inkscape:cx="-162.78571"
      inkscape:cy="280.71564"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
@@ -81,7 +81,7 @@
      id="layer1"
      transform="translate(0,-161.53333)">
     <path
-       style="opacity:1;fill:#8b148c;fill-opacity:1;stroke:#060606;stroke-width:2.1170001;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:320;stroke-opacity:1;paint-order:normal"
+       style="opacity:1;fill:#8b148c;fill-opacity:1;stroke:#000000;stroke-width:2.1170001;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:320;stroke-opacity:1;paint-order:normal"
        d="M 22.048536,195.4 H 112.35963 L 95.426316,217.97779 H 22.048536 Z"
        id="rect1374"
        inkscape:connector-curvature="0"
@@ -91,6 +91,6 @@
        inkscape:connector-curvature="0"
        id="path1381"
        d="M 22.048536,240.55555 H 112.35963 L 95.426321,263.13333 H 22.048536 Z"
-       style="opacity:1;fill:#8b148c;fill-opacity:1;stroke:#060606;stroke-width:2.1170001;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:320;stroke-opacity:1;paint-order:normal" />
+       style="opacity:1;fill:#8b148c;fill-opacity:1;stroke:#000000;stroke-width:2.1170001;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:320;stroke-opacity:1;paint-order:normal" />
   </g>
 </svg>
