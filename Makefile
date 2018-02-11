@@ -5,6 +5,8 @@ svgs = \
 	bmodels/simple_b_bh10_0.svg \
 	bmodels/simple_b_bh25_0.svg \
 	bmodels/simple_b_bh100_0.svg \
+	bmodels/simple_b_shell0_0.svg \
+	bmodels/simple_b_shell1_0.svg \
 	models/simple_armor_0.svg \
 	models/simple_armor_1.svg \
 	models/simple_armor_2.svg \
