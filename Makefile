@@ -2,6 +2,8 @@ all: dist
 PHONY: all
 
 svgs = \
+	bmodels/simple_b_batt0_0.svg \
+	bmodels/simple_b_batt1_0.svg \
 	bmodels/simple_b_bh10_0.svg \
 	bmodels/simple_b_bh25_0.svg \
 	bmodels/simple_b_bh100_0.svg \
@@ -10,6 +12,7 @@ svgs = \
 	models/simple_armor_0.svg \
 	models/simple_armor_1.svg \
 	models/simple_armor_2.svg \
+	models/simple_g_light_0.svg \
 	models/simple_g_shot_0.svg \
 	models/simple_invisibl_0.svg \
 	models/simple_invulner_0.svg \
