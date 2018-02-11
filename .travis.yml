@@ -1,0 +1,27 @@
+language: c
+dist: trusty
+sudo: false
+
+# Install dependencies
+before_script:
+  - sudo apt-get update
+  - sudo apt-get install inkscape wget zip
+  - wget https://archive.hugo.pro/.public/quakeworld-simple-items/oxipng
+  - chmod +x oxipng
+  - sudo mv oxipng /usr/bin/
+
+# Build the simple items PK3
+script:
+  - make dist
+  - zip -r9 out/quakeworld-simple-items.pk3 dist/textures/
+
+# Upload artifacts to GitHub Releases
+after_success:
+  - ls -lh out/*
+  - wget -c https://github.com/probonopd/uploadtool/raw/master/upload.sh
+  - bash upload.sh out/*
+
+# Do not build tags that we create when we upload to GitHub Releases
+branches:
+  except:
+    - /^(?i:continuous)$/
