@@ -7,6 +7,11 @@ Simple item textures for QuakeWorld clients such as ezQuake.
 - Optimized for higher display resolutions (1600×900 and higher).
 - Created using [Inkscape](https://inkscape.org); SVG sources are available in this repository.
 
+## Preview
+
+![Preview on aerowalk](https://archive.hugo.pro/.public/quakeworld-simple-items/quakeworld-simple-items-1.jpg)
+![Preview on dm4ish](https://archive.hugo.pro/.public/quakeworld-simple-items/quakeworld-simple-items-2.jpg)
+
 ## Installation
 
 1. **[Download the PK3 file.](https://github.com/Calinou/quakeworld-simple-items/releases/download/continuous/quakeworld-simple-items.pk3)**
