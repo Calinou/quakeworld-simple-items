@@ -27,13 +27,17 @@ svgs = \
 	models/simple_quaddama_0.svg \
 
 # Render SVGs to PNG images and optimize them
-dist: clean
-	mkdir -p "dist/textures/bmodels" "dist/textures/models"; \
+build: clean
+	mkdir -p "build/textures/bmodels" "build/textures/models"; \
 	for vector in $(svgs); do \
-		raster="dist/textures/$${vector%.*}.png"; \
+		raster="build/textures/$${vector%.*}.png"; \
 		inkscape "src/textures/$$vector" --export-png "$$raster"; \
 		oxipng -o6 --strip all "$$raster"; \
 	done; \
 
+dist: build
+	mkdir -p "out"
+	cd "build" && zip -r9 "../out/quakeworld-simple-items.pk3" "textures/"
+
 clean:
-	rm -rf dist; \
+	rm -rf "build/" "out/"; \

@@ -13,7 +13,6 @@ before_script:
 # Build the simple items PK3
 script:
   - make dist
-  - zip -r9 out/quakeworld-simple-items.pk3 dist/textures/
 
 # Upload artifacts to GitHub Releases
 after_success:
