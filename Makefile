@@ -41,9 +41,12 @@ build: clean
 	done; \
 
 # Generate a PK3 archive for distribution
+# (includes the README and a copy of the license for reference)
 dist: build
-	mkdir -p "out"
-	cd "build" && zip -r9 "../out/quakeworld-simple-items.pk3" "textures/"
+	mkdir -p "out/"
+	cp "README.md" "LICENSE.md" "build/"
+	cd "build" && zip -r9 "../out/quakeworld-simple-items.pk3" "textures/" "README.md" "LICENSE.md"
+	rm "build/README.md" "build/LICENSE.md"
 
 # Clean up build artifacts
 clean:
