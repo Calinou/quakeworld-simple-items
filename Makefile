@@ -1,6 +1,7 @@
 all: dist
 PHONY: all
 
+# The SVGs to generate images from
 svgs = \
 	bmodels/simple_b_batt0_0.svg \
 	bmodels/simple_b_batt1_0.svg \
@@ -26,18 +27,24 @@ svgs = \
 	models/simple_invulner_0.svg \
 	models/simple_quaddama_0.svg \
 
-# Render SVGs to PNG images and optimize them
+# Render SVGs to PNG images and convert them to TGA
+# ezQuake will only override the default simple items from nQuake if they
+# are in TGA format
 build: clean
 	mkdir -p "build/textures/bmodels" "build/textures/models"; \
 	for vector in $(svgs); do \
-		raster="build/textures/$${vector%.*}.png"; \
-		inkscape "src/textures/$$vector" --export-png "$$raster"; \
-		oxipng -o6 --strip all "$$raster"; \
+		raster_png="build/textures/$${vector%.*}.png"; \
+		raster_tga="build/textures/$${vector%.*}.tga"; \
+		inkscape "src/textures/$$vector" --export-png "$$raster_png"; \
+		convert "$$raster_png" "$$raster_tga"; \
+		rm "$$raster_png"; \
 	done; \
 
+# Generate a PK3 archive for distribution
 dist: build
 	mkdir -p "out"
 	cd "build" && zip -r9 "../out/quakeworld-simple-items.pk3" "textures/"
 
+# Clean up build artifacts
 clean:
 	rm -rf "build/" "out/"; \

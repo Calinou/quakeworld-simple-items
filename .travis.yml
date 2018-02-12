@@ -5,7 +5,7 @@ sudo: false
 # Install dependencies
 before_script:
   - sudo apt-get update
-  - sudo apt-get install inkscape wget zip
+  - sudo apt-get install inkscape wget zip imagemagick
   - wget https://archive.hugo.pro/.public/quakeworld-simple-items/oxipng
   - chmod +x oxipng
   - sudo mv oxipng /usr/bin/
