@@ -63,6 +63,10 @@ inventory_weapon_options = \
 	-resize 256x256 \
 	-extent 384x256 \
 
+# The ImageMagick options to use for converting non-weapon icons
+inventory_icon_options = \
+	-resize 256x256 \
+
 # Render SVGs to PNG images and convert them to TGA
 # Also perform some conversions using ImageMagick for inventory images
 # ezQuake will only override the default simple items from nQuake if they
@@ -78,6 +82,7 @@ build: clean
 		rm "$$raster_png"; \
 	done
 
+	# Weapon HUD icons
 	convert \
 		"build/textures/models/simple_g_shot_1.tga" \
 		$(inventory_weapon_options) \
@@ -120,6 +125,30 @@ build: clean
 			cp "build/textures/wad/inv_$${weapon}.tga" "build/textures/wad/$${variant}_$${weapon}.tga"; \
 		done; \
 	done
+
+	# Armor HUD icons
+	for armor_type in 0 1 2; do \
+		convert \
+			"build/textures/models/simple_armor_$${armor_type}.tga" \
+			$(inventory_icon_options) \
+			"build/textures/wad/sb_armor$$((armor_type+1)).tga"; \
+	done
+
+	# Powerup HUD icons
+	convert \
+		"build/textures/models/simple_invisibl_0.tga" \
+		$(inventory_icon_options) \
+		"build/textures/wad/sb_invis.tga"
+
+	convert \
+		"build/textures/models/simple_invulner_0.tga" \
+		$(inventory_icon_options) \
+		"build/textures/wad/sb_invuln.tga"
+
+	convert \
+		"build/textures/models/simple_quaddama_0.tga" \
+		$(inventory_icon_options) \
+		"build/textures/wad/sb_quad.tga"
 
 # Generate a PK3 archive for distribution
 # (includes the README and a copy of the license for reference)
