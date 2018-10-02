@@ -160,4 +160,4 @@ dist: build
 
 # Clean up build artifacts
 clean:
-	rm -rf "build/" "out/"; \
+	rm -rf "build/" "out/"
