@@ -1,6 +1,5 @@
 language: c
-dist: trusty
-sudo: false
+dist: xenial
 
 # Install dependencies
 before_script:
