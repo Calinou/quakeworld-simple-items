@@ -3,8 +3,8 @@ dist: xenial
 
 # Install dependencies
 before_script:
-  - sudo apt-get update
-  - sudo apt-get install inkscape wget zip imagemagick
+  - sudo apt-get update -qq
+  - sudo apt-get install -qqq inkscape wget zip imagemagick
 
 # Build the simple items PK3
 script:
