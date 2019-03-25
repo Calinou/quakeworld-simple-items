@@ -2,7 +2,7 @@ language: c
 dist: xenial
 
 # Install dependencies
-before_script:
+install:
   - sudo apt-get update -qq
   - sudo apt-get install -qqq inkscape wget zip imagemagick
 
