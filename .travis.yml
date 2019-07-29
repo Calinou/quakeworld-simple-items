@@ -1,9 +1,9 @@
 language: minimal
+dist: bionic
 
-# Install dependencies
-addons:
-  apt:
-    packages: [inkscape, wget, zip, imagemagick]
+install:
+  - sudo apt-get update -qq
+  - sudo apt-get install -qqq inkscape wget zip imagemagick
 
 # Build the simple items PK3
 script:
@@ -19,4 +19,4 @@ deploy:
 # Do not build tags that we create when we upload to GitHub Releases
 branches:
   except:
-    - /^(?i:continuous)$/
+    - /^(?i:continuous.*)$/
