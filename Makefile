@@ -1,6 +1,7 @@
 MAKEFLAGS += --silent
+
+.PHONY: all
 all: dist
-PHONY: all
 
 # Directories where images will be placed
 dirs = \
@@ -71,13 +72,14 @@ inventory_icon_options = \
 # Also perform some conversions using ImageMagick for inventory images
 # ezQuake will only override the default simple items from nQuake if they
 # are in TGA format
+.PHONY: build
 build: clean
 	mkdir -p $(dirs)
 
 	for vector in $(svgs); do \
 		raster_png="build/textures/$${vector%.*}.png"; \
 		raster_tga="build/textures/$${vector%.*}.tga"; \
-		inkscape "src/textures/$$vector" --export-png "$$raster_png"; \
+		inkscape "src/textures/$$vector" --export-file "$$raster_png"; \
 		convert "$$raster_png" "$$raster_tga"; \
 		rm "$$raster_png"; \
 	done
@@ -152,6 +154,7 @@ build: clean
 
 # Generate a PK3 archive for distribution
 # (includes the README and a copy of the license for reference)
+.PHONY: dist
 dist: build
 	mkdir -p "out/"
 	cp "README.md" "LICENSE.md" "build/"
@@ -159,5 +162,6 @@ dist: build
 	rm "build/README.md" "build/LICENSE.md"
 
 # Clean up build artifacts
+.PHONY: clean
 clean:
 	rm -rf "build/" "out/"
