@@ -1,9 +1,13 @@
 language: minimal
 dist: bionic
 
-install:
-  - sudo apt-get update -qq
-  - sudo apt-get install -qqq inkscape wget zip imagemagick
+addons:
+  apt:
+    packages:
+      - imagemagick
+      - inkscape
+      - wget
+      - zip
 
 # Build the simple items PK3
 script:
